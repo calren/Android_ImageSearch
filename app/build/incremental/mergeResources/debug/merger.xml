@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger>
+
+    <dataSet config="main" >
+        <source path="/Users/Caren/Documents/Android/GridImageSearch/app/src/main/res" >
+            <file
+                name="ic_launcher"
+                path="/Users/Caren/Documents/Android/GridImageSearch/app/src/main/res/drawable-hdpi/ic_launcher.png"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
+                name="ic_launcher"
+                path="/Users/Caren/Documents/Android/GridImageSearch/app/src/main/res/drawable-mdpi/ic_launcher.png"
+                qualifiers="mdpi"
+                type="drawable" />
+            <file
+                name="ic_launcher"
+                path="/Users/Caren/Documents/Android/GridImageSearch/app/src/main/res/drawable-xhdpi/ic_launcher.png"
+                qualifiers="xhdpi"
+                type="drawable" />
+            <file
+                name="ic_launcher"
+                path="/Users/Caren/Documents/Android/GridImageSearch/app/src/main/res/drawable-xxhdpi/ic_launcher.png"
+                qualifiers="xxhdpi"
+                type="drawable" />
+            <file
+                name="activity_search"
+                path="/Users/Caren/Documents/Android/GridImageSearch/app/src/main/res/layout/activity_search.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="search"
+                path="/Users/Caren/Documents/Android/GridImageSearch/app/src/main/res/menu/search.xml"
+                qualifiers=""
+                type="menu" />
+            <file
+                path="/Users/Caren/Documents/Android/GridImageSearch/app/src/main/res/values/dimens.xml"
+                qualifiers="" >
+                <dimen name="activity_horizontal_margin" >16dp
+                </dimen>
+                <dimen name="activity_vertical_margin" >16dp
+                </dimen>
+            </file>
+            <file
+                path="/Users/Caren/Documents/Android/GridImageSearch/app/src/main/res/values/strings.xml"
+                qualifiers="" >
+                <string name="action_settings" >Settings
+                </string>
+                <string name="title_activity_image_display" >ImageDisplayActivity
+                </string>
+                <string name="queryHint" >Enter Search Query
+                </string>
+                <string name="app_name" >GridImageSearch
+                </string>
+                <string name="hello_world" >Hello world!
+                </string>
+            </file>
+            <file
+                path="/Users/Caren/Documents/Android/GridImageSearch/app/src/main/res/values/styles.xml"
+                qualifiers="" >
+
+                <style
+                    name="AppTheme"
+                    parent="android:Theme.Holo.Light.DarkActionBar" >
+
+                    <!-- Customize your theme here. -->
+                </style>
+            </file>
+            <file
+                path="/Users/Caren/Documents/Android/GridImageSearch/app/src/main/res/values-w820dp/dimens.xml"
+                qualifiers="w820dp" >
+                <dimen name="activity_horizontal_margin" >64dp
+                </dimen>
+            </file>
+            <file
+                name="item_image_result"
+                path="/Users/Caren/Documents/Android/GridImageSearch/app/src/main/res/layout/item_image_result.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="image_display"
+                path="/Users/Caren/Documents/Android/GridImageSearch/app/src/main/res/menu/image_display.xml"
+                qualifiers=""
+                type="menu" />
+            <file
+                name="activity_image_display"
+                path="/Users/Caren/Documents/Android/GridImageSearch/app/src/main/res/layout/activity_image_display.xml"
+                qualifiers=""
+                type="layout" />
+        </source>
+        <source path="/Users/Caren/Documents/Android/GridImageSearch/app/build/res/rs/debug" />
+        <source path="/Users/Caren/Documents/Android/GridImageSearch/app/build/res/generated/debug" />
+    </dataSet>
+    <dataSet config="debug" >
+        <source path="/Users/Caren/Documents/Android/GridImageSearch/app/src/debug/res" />
+    </dataSet>
+
+</merger>
