@@ -30,6 +30,12 @@ public class SearchActivity extends Activity {
     ArrayList<ImageResult> imageResults = new ArrayList<ImageResult>();
     ImageResultArrayAdapter imageAdapter;
 
+    int imageOffLoad = 0;
+
+    String color = "";
+    String type = "";
+
+    String apiRequest = "";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,6 +52,21 @@ public class SearchActivity extends Activity {
                 startActivity(i);
             }
         });
+        gvResults.setOnScrollListener(new EndlessScrollListener() {
+            @Override
+            public void onLoadMore(int page, int totalItemsCount) {
+                // Triggered only when new data needs to be appended to the list
+                // Add whatever code is needed to append new items to your AdapterView
+//                customLoadMoreDataFromApi(page);
+                // or customLoadMoreDataFromApi(totalItemsCount);
+
+                // put which item to start loading
+//                queryParameters.put("start", String.valueOf((page) * NUM_PER_PAGE));
+
+                callApi(apiRequest, imageAdapter.getCount());
+
+            }
+        });
     }
 
     @Override
@@ -54,18 +75,6 @@ public class SearchActivity extends Activity {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.search, menu);
         return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-        if (id == R.id.action_settings) {
-            return true;
-        }
-        return super.onOptionsItemSelected(item);
     }
 
     public void setUpView() {
@@ -78,21 +87,59 @@ public class SearchActivity extends Activity {
         String query = etQuery.getText().toString();
         Toast.makeText(this, "Searching for: " + query, Toast.LENGTH_SHORT).show();
         AsyncHttpClient client = new AsyncHttpClient();
-        client.get("https://ajax.googleapis.com/ajax/services/search/images?rsz=8&start=" + 0 + "&v=1.0&q=" + Uri.encode(query),
+        apiRequest = "https://ajax.googleapis.com/ajax/services/search/images?rsz=8&v=1.0&q=" + Uri.encode(query) +
+                "&imgcolor=" + color + "&imgtype=" + type;
+        System.out.println(apiRequest);
+        callApi(apiRequest, imageOffLoad);
+    }
+
+    public void callApi(String apiRequest, int imageOffLoad) {
+        AsyncHttpClient client = new AsyncHttpClient();
+        apiRequest = apiRequest + "&start=" + imageAdapter.getCount();
+
+        client.get(apiRequest,
                 new JsonHttpResponseHandler() {
                     @Override
                     public void onSuccess(JSONObject response) {
                         JSONArray imageJsonresults = null;
                         try {
                             imageJsonresults = response.getJSONObject("responseData").getJSONArray("results");
-                            System.out.println("imageJsonresults = " + imageJsonresults.toString());
-                            imageResults.clear();
+//                            imageResults.clear();
                             imageAdapter.addAll(ImageResult.fromJSONArray(imageJsonresults));
                         } catch (JSONException e) {
                             e.printStackTrace();
-;                        }
+                        }
                     }
                 });
+    }
+
+
+    public void showSettingsView() {
+        Intent i = new Intent(getApplicationContext(), SettingsActivity.class);
+        startActivityForResult(i, 24);
+    }
+
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (resultCode == RESULT_OK) {
+            color = data.getExtras().getString("color");
+            type = data.getExtras().getString("type");
+        }
+
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+        if (id == R.id.action_settings) {
+            showSettingsView();
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 
 

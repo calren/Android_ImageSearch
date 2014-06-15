@@ -13,6 +13,8 @@
         </activity>
         <activity android:label="@string/title_activity_image_display" android:name="com.codepath.gridimagesearch.app.ImageDisplayActivity">
         </activity>
+        <activity android:label="@string/title_activity_settings" android:name="com.codepath.gridimagesearch.app.SettingsActivity">
+        </activity>
     </application>
 
 </manifest>
