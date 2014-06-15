@@ -86,7 +86,7 @@ public class SearchActivity extends Activity {
     public void onImageSearch(View view) {
         String query = etQuery.getText().toString();
         Toast.makeText(this, "Searching for: " + query, Toast.LENGTH_SHORT).show();
-        AsyncHttpClient client = new AsyncHttpClient();
+        imageResults.clear();
         apiRequest = "https://ajax.googleapis.com/ajax/services/search/images?rsz=8&v=1.0&q=" + Uri.encode(query) +
                 "&imgcolor=" + color + "&imgtype=" + type;
         System.out.println(apiRequest);
@@ -104,7 +104,6 @@ public class SearchActivity extends Activity {
                         JSONArray imageJsonresults = null;
                         try {
                             imageJsonresults = response.getJSONObject("responseData").getJSONArray("results");
-//                            imageResults.clear();
                             imageAdapter.addAll(ImageResult.fromJSONArray(imageJsonresults));
                         } catch (JSONException e) {
                             e.printStackTrace();
