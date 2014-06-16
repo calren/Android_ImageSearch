@@ -1,6 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <!-- From: file:/Users/Caren/Documents/Android/GridImageSearch/app/src/main/res/values/settingsArrays.xml -->
+    <eat-comment />
+
+    <string-array name="colorOptions">
+        <item>black</item>
+        <item>blue</item>
+        <item>brown</item>
+        <item>gray</item>
+        <item>green</item>
+        <item>orange</item>
+        <item>pink</item>
+        <item>purple</item>
+        <item>red</item>
+        <item>teal</item>
+        <item>white</item>
+        <item>yellow</item>
+    </string-array>
     <!-- From: file:/Users/Caren/Documents/Android/GridImageSearch/app/src/main/res/values/strings.xml -->
     <eat-comment />
 
@@ -23,6 +40,15 @@
         <item>photo</item>
         <item>clipart</item>
         <item>lineart</item>
+    </string-array>
+    <!-- From: file:/Users/Caren/Documents/Android/GridImageSearch/app/src/main/res/values/settingsArrays.xml -->
+    <eat-comment />
+
+    <string-array name="sizeOptions">
+        <item>small</item>
+        <item>medium</item>
+        <item>large</item>
+        <item>extra-large</item>
     </string-array>
     <!-- From: file:/Users/Caren/Documents/Android/GridImageSearch/app/src/main/res/values/dimens.xml -->
     <eat-comment />

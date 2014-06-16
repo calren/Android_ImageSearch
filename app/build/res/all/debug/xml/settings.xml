@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <EditTextPreference android:title="Site Search"
+        android:key="sitePref"
+        android:defaultValue="google.com">
+    </EditTextPreference>
+
+    <ListPreference android:title="Size"
+        android:key="sizePref"
+        android:defaultValue="medium"
+        android:entries="@array/sizeOptions"
+        android:entryValues="@array/sizeOptions" />
+
+    <ListPreference android:title="Color"
+        android:key="colorPref"
+        android:defaultValue="black"
+        android:entries="@array/colorOptions"
+        android:entryValues="@array/colorOptions" />
+
+</PreferenceScreen><!-- From: file:/Users/Caren/Documents/Android/GridImageSearch/app/src/main/res/xml/settings.xml -->

@@ -4,6 +4,11 @@
     <dataSet config="main" >
         <source path="/Users/Caren/Documents/Android/GridImageSearch/app/src/main/res" >
             <file
+                name="search"
+                path="/Users/Caren/Documents/Android/GridImageSearch/app/src/main/res/drawable/search.png"
+                qualifiers=""
+                type="drawable" />
+            <file
                 name="ic_launcher"
                 path="/Users/Caren/Documents/Android/GridImageSearch/app/src/main/res/drawable-hdpi/ic_launcher.png"
                 qualifiers="hdpi"
@@ -24,13 +29,33 @@
                 qualifiers="xxhdpi"
                 type="drawable" />
             <file
+                name="activity_image_display"
+                path="/Users/Caren/Documents/Android/GridImageSearch/app/src/main/res/layout/activity_image_display.xml"
+                qualifiers=""
+                type="layout" />
+            <file
                 name="activity_search"
                 path="/Users/Caren/Documents/Android/GridImageSearch/app/src/main/res/layout/activity_search.xml"
                 qualifiers=""
                 type="layout" />
             <file
+                name="item_image_result"
+                path="/Users/Caren/Documents/Android/GridImageSearch/app/src/main/res/layout/item_image_result.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="image_display"
+                path="/Users/Caren/Documents/Android/GridImageSearch/app/src/main/res/menu/image_display.xml"
+                qualifiers=""
+                type="menu" />
+            <file
                 name="search"
                 path="/Users/Caren/Documents/Android/GridImageSearch/app/src/main/res/menu/search.xml"
+                qualifiers=""
+                type="menu" />
+            <file
+                name="settings"
+                path="/Users/Caren/Documents/Android/GridImageSearch/app/src/main/res/menu/settings.xml"
                 qualifiers=""
                 type="menu" />
             <file
@@ -40,6 +65,62 @@
                 </dimen>
                 <dimen name="activity_vertical_margin" >16dp
                 </dimen>
+            </file>
+            <file
+                path="/Users/Caren/Documents/Android/GridImageSearch/app/src/main/res/values/settingsArrays.xml"
+                qualifiers="" >
+                <string-array name="sizeOptions" >
+                    <item>
+small
+                    </item>
+                    <item>
+medium
+                    </item>
+                    <item>
+large
+                    </item>
+                    <item>
+extra-large
+                    </item>
+                </string-array>
+                <string-array name="colorOptions" >
+                    <item>
+black
+                    </item>
+                    <item>
+blue
+                    </item>
+                    <item>
+brown
+                    </item>
+                    <item>
+gray
+                    </item>
+                    <item>
+green
+                    </item>
+                    <item>
+orange
+                    </item>
+                    <item>
+pink
+                    </item>
+                    <item>
+purple
+                    </item>
+                    <item>
+red
+                    </item>
+                    <item>
+teal
+                    </item>
+                    <item>
+white
+                    </item>
+                    <item>
+yellow
+                    </item>
+                </string-array>
             </file>
             <file
                 path="/Users/Caren/Documents/Android/GridImageSearch/app/src/main/res/values/strings.xml"
@@ -92,9 +173,9 @@ yellow
                     </item>
                 </string-array>
 
-                <string name="queryHint" >Enter Search Query
-                </string>
                 <string name="app_name" >GridImageSearch
+                </string>
+                <string name="queryHint" >Enter Search Query
                 </string>
                 <string name="color_prompt" > Chose a color 
                 </string>
@@ -134,30 +215,10 @@ lineart
                 </dimen>
             </file>
             <file
-                name="item_image_result"
-                path="/Users/Caren/Documents/Android/GridImageSearch/app/src/main/res/layout/item_image_result.xml"
-                qualifiers=""
-                type="layout" />
-            <file
-                name="image_display"
-                path="/Users/Caren/Documents/Android/GridImageSearch/app/src/main/res/menu/image_display.xml"
-                qualifiers=""
-                type="menu" />
-            <file
-                name="activity_image_display"
-                path="/Users/Caren/Documents/Android/GridImageSearch/app/src/main/res/layout/activity_image_display.xml"
-                qualifiers=""
-                type="layout" />
-            <file
                 name="settings"
-                path="/Users/Caren/Documents/Android/GridImageSearch/app/src/main/res/menu/settings.xml"
+                path="/Users/Caren/Documents/Android/GridImageSearch/app/src/main/res/xml/settings.xml"
                 qualifiers=""
-                type="menu" />
-            <file
-                name="activity_settings"
-                path="/Users/Caren/Documents/Android/GridImageSearch/app/src/main/res/layout/activity_settings.xml"
-                qualifiers=""
-                type="layout" />
+                type="xml" />
         </source>
         <source path="/Users/Caren/Documents/Android/GridImageSearch/app/build/res/rs/debug" />
         <source path="/Users/Caren/Documents/Android/GridImageSearch/app/build/res/generated/debug" />

@@ -2,8 +2,10 @@ package com.codepath.gridimagesearch.app;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -32,8 +34,7 @@ public class SearchActivity extends Activity {
 
     int imageOffLoad = 0;
 
-    String color = "";
-    String type = "";
+    SharedPreferences sharedPreferences;
 
     String apiRequest = "";
     @Override
@@ -55,13 +56,6 @@ public class SearchActivity extends Activity {
         gvResults.setOnScrollListener(new EndlessScrollListener() {
             @Override
             public void onLoadMore(int page, int totalItemsCount) {
-                // Triggered only when new data needs to be appended to the list
-                // Add whatever code is needed to append new items to your AdapterView
-//                customLoadMoreDataFromApi(page);
-                // or customLoadMoreDataFromApi(totalItemsCount);
-
-                // put which item to start loading
-//                queryParameters.put("start", String.valueOf((page) * NUM_PER_PAGE));
 
                 callApi(apiRequest, imageAdapter.getCount());
 
@@ -84,11 +78,12 @@ public class SearchActivity extends Activity {
     }
 
     public void onImageSearch(View view) {
+        sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
         String query = etQuery.getText().toString();
         Toast.makeText(this, "Searching for: " + query, Toast.LENGTH_SHORT).show();
         imageResults.clear();
         apiRequest = "https://ajax.googleapis.com/ajax/services/search/images?rsz=8&v=1.0&q=" + Uri.encode(query) +
-                "&imgcolor=" + color + "&imgtype=" + type;
+                "&imgcolor=" + sharedPreferences.getString("colorPref", ""); // + "&imgtype=" + type;
         System.out.println(apiRequest);
         callApi(apiRequest, imageOffLoad);
     }
@@ -112,20 +107,9 @@ public class SearchActivity extends Activity {
                 });
     }
 
-
     public void showSettingsView() {
         Intent i = new Intent(getApplicationContext(), SettingsActivity.class);
-        startActivityForResult(i, 24);
-    }
-
-
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        if (resultCode == RESULT_OK) {
-            color = data.getExtras().getString("color");
-            type = data.getExtras().getString("type");
-        }
-
+        startActivity(i);
     }
 
     @Override
