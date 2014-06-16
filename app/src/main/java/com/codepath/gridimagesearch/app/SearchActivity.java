@@ -12,10 +12,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.GridView;
 import android.widget.SearchView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.etsy.android.grid.StaggeredGridView;
@@ -34,6 +32,7 @@ public class SearchActivity extends Activity {
     StaggeredGridView gvResults;
     ArrayList<ImageResult> imageResults = new ArrayList<ImageResult>();
     ImageResultArrayAdapter imageAdapter;
+    TextView tvPlaceHolder;
 
     int imageCount = 0;
 
@@ -45,7 +44,9 @@ public class SearchActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search);
+        tvPlaceHolder = (TextView)findViewById(R.id.tvPlaceHolder);
         setUpView();
+
         imageAdapter = new ImageResultArrayAdapter(this, imageResults);
         gvResults.setAdapter(imageAdapter);
         gvResults.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -98,6 +99,7 @@ public class SearchActivity extends Activity {
     }
 
     public void onImageSearch(String url) {
+        tvPlaceHolder.setVisibility(View.INVISIBLE);
         sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
         String query = url;
         Toast.makeText(this, "Searching for: " + url, Toast.LENGTH_SHORT).show();
