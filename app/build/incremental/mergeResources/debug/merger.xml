@@ -219,6 +219,31 @@ lineart
                 path="/Users/Caren/Documents/Android/GridImageSearch/app/src/main/res/xml/settings.xml"
                 qualifiers=""
                 type="xml" />
+            <file
+                name="ic_search"
+                path="/Users/Caren/Documents/Android/GridImageSearch/app/src/main/res/drawable/ic_search.png"
+                qualifiers=""
+                type="drawable" />
+            <file
+                name="ic_search"
+                path="/Users/Caren/Documents/Android/GridImageSearch/app/src/main/res/drawable-xxhdpi/ic_search.png"
+                qualifiers="xxhdpi"
+                type="drawable" />
+            <file
+                name="ic_search"
+                path="/Users/Caren/Documents/Android/GridImageSearch/app/src/main/res/drawable-mdpi/ic_search.png"
+                qualifiers="mdpi"
+                type="drawable" />
+            <file
+                name="activity_settings"
+                path="/Users/Caren/Documents/Android/GridImageSearch/app/src/main/res/layout/activity_settings.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="ic_search"
+                path="/Users/Caren/Documents/Android/GridImageSearch/app/src/main/res/drawable-xhdpi/ic_search.png"
+                qualifiers="xhdpi"
+                type="drawable" />
         </source>
         <source path="/Users/Caren/Documents/Android/GridImageSearch/app/build/res/rs/debug" />
         <source path="/Users/Caren/Documents/Android/GridImageSearch/app/build/res/generated/debug" />

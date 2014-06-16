@@ -1,6 +1,8 @@
 package com.codepath.gridimagesearch.app;
 
 import android.app.Activity;
+import android.app.SearchManager;
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.net.Uri;
@@ -13,6 +15,7 @@ import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.GridView;
+import android.widget.SearchView;
 import android.widget.Toast;
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.JsonHttpResponseHandler;
@@ -37,6 +40,9 @@ public class SearchActivity extends Activity {
     SharedPreferences sharedPreferences;
 
     String apiRequest = "";
+
+    String searchQuery = SearchManager.QUERY;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -57,7 +63,7 @@ public class SearchActivity extends Activity {
             @Override
             public void onLoadMore(int page, int totalItemsCount) {
 
-                callApi(apiRequest, imageAdapter.getCount());
+                callApi(apiRequest);
 
             }
         });
@@ -66,29 +72,45 @@ public class SearchActivity extends Activity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
 
-        // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.search, menu);
-        return true;
+
+
+        // Associate searchable configuration with the SearchView
+        SearchManager searchManager = (SearchManager) getSystemService(Context.SEARCH_SERVICE);
+        SearchView searchView = (SearchView) menu.findItem(R.id.action_search).getActionView();
+        searchView.setSearchableInfo(searchManager.getSearchableInfo(getComponentName()));
+
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+
+            public boolean onQueryTextChange(String text) {
+                return false;
+            }
+            public boolean onQueryTextSubmit(String searchQuery) {
+                onImageSearch(searchQuery);
+
+                return true;
+            }
+        });
+
+        return super.onCreateOptionsMenu(menu);
     }
 
     public void setUpView() {
-        etQuery = (EditText) findViewById(R.id.etQuery);
         gvResults = (GridView) findViewById(R.id.gvResults);
-        btnSearch = (Button) findViewById(R.id.btnSearch);
     }
 
-    public void onImageSearch(View view) {
+    public void onImageSearch(String url) {
         sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
-        String query = etQuery.getText().toString();
-        Toast.makeText(this, "Searching for: " + query, Toast.LENGTH_SHORT).show();
+        String query = url;
+        Toast.makeText(this, "Searching for: " + url, Toast.LENGTH_SHORT).show();
         imageResults.clear();
         apiRequest = "https://ajax.googleapis.com/ajax/services/search/images?rsz=8&v=1.0&q=" + Uri.encode(query) +
                 "&imgcolor=" + sharedPreferences.getString("colorPref", ""); // + "&imgtype=" + type;
         System.out.println(apiRequest);
-        callApi(apiRequest, imageOffLoad);
+        callApi(apiRequest);
     }
 
-    public void callApi(String apiRequest, int imageOffLoad) {
+    public void callApi(String apiRequest) {
         AsyncHttpClient client = new AsyncHttpClient();
         apiRequest = apiRequest + "&start=" + imageAdapter.getCount();
 

@@ -46,6 +46,11 @@ public class SettingsActivity extends PreferenceActivity implements
         return super.onOptionsItemSelected(item);
     }
 
+    /*
+    The rest of this class was mostly taken from a thread on StackOverflow about how to change the summary
+    of preference based on it's value
+     */
+
     @Override
     protected void onResume() {
         super.onResume();
