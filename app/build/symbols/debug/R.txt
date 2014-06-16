@@ -12,9 +12,10 @@ int attr grid_paddingTop 0x7f010006
 int attr item_margin 0x7f010003
 int dimen activity_horizontal_margin 0x7f060000
 int dimen activity_vertical_margin 0x7f060001
-int drawable ic_launcher 0x7f020000
-int drawable ic_search 0x7f020001
-int drawable search 0x7f020002
+int drawable ic_action_name 0x7f020000
+int drawable ic_launcher 0x7f020001
+int drawable ic_search 0x7f020002
+int drawable search 0x7f020003
 int id Done 0x7f0a0008
 int id action_search 0x7f0a000a
 int id action_settings 0x7f0a0009
