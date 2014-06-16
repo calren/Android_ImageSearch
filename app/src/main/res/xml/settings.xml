@@ -10,12 +10,12 @@
         android:key="sizePref"
         android:defaultValue="medium"
         android:entries="@array/sizeOptions"
-        android:entryValues="@array/sizeOptions" />
+        android:entryValues="@array/sizeOptions"/>
 
     <ListPreference android:title="Color"
         android:key="colorPref"
         android:defaultValue="black"
         android:entries="@array/colorOptions"
-        android:entryValues="@array/colorOptions" />
+        android:entryValues="@array/colorOptions"/>
 
 </PreferenceScreen>

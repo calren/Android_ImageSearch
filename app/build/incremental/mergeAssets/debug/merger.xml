@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <merger>
 
+    <dataSet config="1.0.5" >
+        <source path="/Users/Caren/Documents/Android/GridImageSearch/app/build/exploded-aar/com.etsy.android.grid/library/1.0.5/assets" />
+    </dataSet>
     <dataSet config="main" >
         <source path="/Users/Caren/Documents/Android/GridImageSearch/app/src/main/assets" />
     </dataSet>

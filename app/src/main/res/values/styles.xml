@@ -5,4 +5,10 @@
         <!-- Customize your theme here. -->
     </style>
 
+    <style name="SettingsTheme" parent="android:Theme.Holo.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="android:textColor">#00688B</item>
+        <item name="android:textColorSecondary">#0D4F8B</item>
+    </style>
+
 </resources>

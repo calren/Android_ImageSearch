@@ -50,6 +50,19 @@
         <item>large</item>
         <item>extra-large</item>
     </string-array>
+    <!-- From: file:/Users/Caren/Documents/Android/GridImageSearch/app/build/exploded-aar/com.etsy.android.grid/library/1.0.5/res/values/values.xml -->
+    <eat-comment />
+
+    <declare-styleable name="StaggeredGridView">
+        <attr name="column_count" format="integer" />
+        <attr name="column_count_portrait" format="integer" />
+        <attr name="column_count_landscape" format="integer" />
+        <attr name="item_margin" format="dimension" />
+        <attr name="grid_paddingLeft" format="dimension" />
+        <attr name="grid_paddingRight" format="dimension" />
+        <attr name="grid_paddingTop" format="dimension" />
+        <attr name="grid_paddingBottom" format="dimension" />
+    </declare-styleable>
     <!-- From: file:/Users/Caren/Documents/Android/GridImageSearch/app/src/main/res/values/dimens.xml -->
     <eat-comment />
 
@@ -71,6 +84,13 @@
 
     <style name="AppTheme" parent="android:Theme.Holo.Light.DarkActionBar">
         <!-- Customize your theme here. -->
+    </style>
+
+    <style name="SettingsTheme" parent="android:Theme.Holo.Light.DarkActionBar">
+
+        <!-- Customize your theme here. -->
+        <item name="android:textColor">#00688B</item>
+        <item name="android:textColorSecondary">#0D4F8B</item>
     </style>
 
 </resources>

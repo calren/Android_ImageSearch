@@ -17,6 +17,8 @@ import android.widget.EditText;
 import android.widget.GridView;
 import android.widget.SearchView;
 import android.widget.Toast;
+
+import com.etsy.android.grid.StaggeredGridView;
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.JsonHttpResponseHandler;
 
@@ -29,7 +31,7 @@ import java.util.ArrayList;
 
 public class SearchActivity extends Activity {
 
-    GridView gvResults;
+    StaggeredGridView gvResults;
     ArrayList<ImageResult> imageResults = new ArrayList<ImageResult>();
     ImageResultArrayAdapter imageAdapter;
 
@@ -92,7 +94,7 @@ public class SearchActivity extends Activity {
     }
 
     public void setUpView() {
-        gvResults = (GridView) findViewById(R.id.gvResults);
+        gvResults = (StaggeredGridView) findViewById(R.id.gvResults);
     }
 
     public void onImageSearch(String url) {
