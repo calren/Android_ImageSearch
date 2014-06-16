@@ -104,8 +104,13 @@ public class SearchActivity extends Activity {
         String query = url;
         Toast.makeText(this, "Searching for: " + url, Toast.LENGTH_SHORT).show();
         imageResults.clear();
+        imageCount = 0;
+//        imageAdapter.notifyDataSetChanged();
         apiRequest = "https://ajax.googleapis.com/ajax/services/search/images?rsz=8&v=1.0&q=" + Uri.encode(query) +
                 "&imgcolor=" + sharedPreferences.getString("colorPref", ""); // + "&imgtype=" + type;
+//        if (!(sharedPreferences.getString("fileTypePref", "all")).equals("all")) {
+//            apiRequest = apiRequest + "&as_filetype=" + sharedPreferences.getString("fileTypePref", "");
+//        }
         callApi(apiRequest);
     }
 

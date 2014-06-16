@@ -180,6 +180,20 @@ white
 yellow
                     </item>
                 </string-array>
+                <string-array name="fileOptions" >
+                    <item>
+all
+                    </item>
+                    <item>
+jpg
+                    </item>
+                    <item>
+png
+                    </item>
+                    <item>
+gif
+                    </item>
+                </string-array>
             </file>
             <file
                 path="/Users/Caren/Documents/Android/GridImageSearch/app/src/main/res/values/strings.xml"
@@ -189,6 +203,8 @@ yellow
                 <string name="action_settings" >Settings
                 </string>
                 <string name="title_activity_image_display" >ImageDisplayActivity
+                </string>
+                <string name="type_prompt" > Select a type 
                 </string>
 
                 <string-array name="imgcolor_array" >
@@ -230,11 +246,9 @@ yellow
                     </item>
                 </string-array>
 
-                <string name="type_prompt" > Select a type 
+                <string name="app_name" >GridImageSearch
                 </string>
                 <string name="queryHint" >Enter Search Query
-                </string>
-                <string name="app_name" >GridImageSearch
                 </string>
                 <string name="color_prompt" > Chose a color 
                 </string>
@@ -266,10 +280,10 @@ lineart
 
                     <!-- Customize your theme here. -->
                     <item name="android:textColor">
-#00688B
+#06266F
                     </item>
                     <item name="android:textColorSecondary">
-#0D4F8B
+#2A4480
                     </item>
                 </style>
 

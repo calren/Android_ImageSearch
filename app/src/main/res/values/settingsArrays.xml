@@ -22,4 +22,11 @@
         <item>yellow</item>
     </string-array>
 
+    <string-array name="fileOptions">
+        <item>all</item>
+        <item>jpg</item>
+        <item>png</item>
+        <item>gif</item>
+    </string-array>
+
 </resources>

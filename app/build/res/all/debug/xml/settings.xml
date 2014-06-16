@@ -18,4 +18,10 @@
         android:entries="@array/colorOptions"
         android:entryValues="@array/colorOptions"/>
 
+    <ListPreference android:title="File Type"
+        android:key="fileTypePref"
+        android:defaultValue="all"
+        android:entries="@array/fileOptions"
+        android:entryValues="@array/fileOptions"/>
+
 </PreferenceScreen><!-- From: file:/Users/Caren/Documents/Android/GridImageSearch/app/src/main/res/xml/settings.xml -->
