@@ -29,19 +29,15 @@ import java.util.ArrayList;
 
 public class SearchActivity extends Activity {
 
-    EditText etQuery;
     GridView gvResults;
-    Button btnSearch;
     ArrayList<ImageResult> imageResults = new ArrayList<ImageResult>();
     ImageResultArrayAdapter imageAdapter;
 
-    int imageOffLoad = 0;
+    int imageCount = 0;
 
     SharedPreferences sharedPreferences;
 
     String apiRequest = "";
-
-    String searchQuery = SearchManager.QUERY;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -106,14 +102,14 @@ public class SearchActivity extends Activity {
         imageResults.clear();
         apiRequest = "https://ajax.googleapis.com/ajax/services/search/images?rsz=8&v=1.0&q=" + Uri.encode(query) +
                 "&imgcolor=" + sharedPreferences.getString("colorPref", ""); // + "&imgtype=" + type;
-        System.out.println(apiRequest);
         callApi(apiRequest);
     }
 
     public void callApi(String apiRequest) {
         AsyncHttpClient client = new AsyncHttpClient();
-        apiRequest = apiRequest + "&start=" + imageAdapter.getCount();
-
+        apiRequest = apiRequest + "&start=" + imageCount;
+        imageCount = imageCount + 8;
+        System.out.println("apiRequest = " + apiRequest);
         client.get(apiRequest,
                 new JsonHttpResponseHandler() {
                     @Override
@@ -136,9 +132,6 @@ public class SearchActivity extends Activity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
         if (id == R.id.action_settings) {
             showSettingsView();
