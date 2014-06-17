@@ -33,6 +33,7 @@ public class SearchActivity extends Activity {
     ArrayList<ImageResult> imageResults = new ArrayList<ImageResult>();
     ImageResultArrayAdapter imageAdapter;
     TextView tvPlaceHolder;
+    String query;
 
     int imageCount;
 
@@ -85,6 +86,7 @@ public class SearchActivity extends Activity {
                 return false;
             }
             public boolean onQueryTextSubmit(String searchQuery) {
+                query = searchQuery;
                 onImageSearch(searchQuery);
 
                 return true;
@@ -168,6 +170,9 @@ public class SearchActivity extends Activity {
         if (id == R.id.action_settings) {
             showSettingsView();
             return true;
+        }
+        if (id == R.id.action_refresh) {
+            onImageSearch(query);
         }
         return super.onOptionsItemSelected(item);
     }

@@ -17,7 +17,8 @@ int drawable ic_action_name 0x7f020000
 int drawable ic_launcher 0x7f020001
 int drawable ic_search 0x7f020002
 int drawable search 0x7f020003
-int id action_search 0x7f0a0004
+int id action_refresh 0x7f0a0004
+int id action_search 0x7f0a0005
 int id action_settings 0x7f0a0003
 int id gvResults 0x7f0a0001
 int id ivResult 0x7f0a0000

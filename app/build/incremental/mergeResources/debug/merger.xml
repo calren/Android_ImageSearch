@@ -208,8 +208,6 @@ yellow
                 </string>
                 <string name="title_activity_image_display" >ImageDisplayActivity
                 </string>
-                <string name="type_prompt" > Select a type 
-                </string>
 
                 <string-array name="imgcolor_array" >
                     <item>
@@ -250,9 +248,11 @@ yellow
                     </item>
                 </string-array>
 
-                <string name="app_name" >GridImageSearch
+                <string name="type_prompt" > Select a type 
                 </string>
                 <string name="queryHint" >Enter Search Query
+                </string>
+                <string name="app_name" >GridImageSearch
                 </string>
                 <string name="color_prompt" > Chose a color 
                 </string>
