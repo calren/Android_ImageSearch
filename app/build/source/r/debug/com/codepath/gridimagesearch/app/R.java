@@ -10,10 +10,10 @@ package com.codepath.gridimagesearch.app;
 public final class R {
     public static final class array {
         public static final int colorOptions=0x7f050000;
-        public static final int fileOptions=0x7f050001;
-        public static final int imgcolor_array=0x7f050002;
-        public static final int imgtype_array=0x7f050003;
-        public static final int sizeOptions=0x7f050004;
+        public static final int imgcolor_array=0x7f050001;
+        public static final int imgtype_array=0x7f050002;
+        public static final int sizeOptions=0x7f050003;
+        public static final int typeOptions=0x7f050004;
     }
     public static final class attr {
         /** <p>Must be an integer value, such as "<code>100</code>".
@@ -102,24 +102,16 @@ containing a value of this type.
         public static final int search=0x7f020003;
     }
     public static final class id {
-        public static final int Done=0x7f0a0009;
-        public static final int action_search=0x7f0a000b;
-        public static final int action_settings=0x7f0a000a;
-        public static final int colorSpinner=0x7f0a0008;
+        public static final int action_search=0x7f0a0004;
+        public static final int action_settings=0x7f0a0003;
         public static final int gvResults=0x7f0a0001;
         public static final int ivResult=0x7f0a0000;
-        public static final int textView=0x7f0a0006;
-        public static final int tvColorFilter=0x7f0a0005;
-        public static final int tvImageSize=0x7f0a0004;
         public static final int tvPlaceHolder=0x7f0a0002;
-        public static final int tvTitle=0x7f0a0003;
-        public static final int typeSpinner=0x7f0a0007;
     }
     public static final class layout {
         public static final int activity_image_display=0x7f030000;
         public static final int activity_search=0x7f030001;
-        public static final int activity_settings=0x7f030002;
-        public static final int item_image_result=0x7f030003;
+        public static final int item_image_result=0x7f030002;
     }
     public static final class menu {
         public static final int image_display=0x7f090000;

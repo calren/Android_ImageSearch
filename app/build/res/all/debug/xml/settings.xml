@@ -8,20 +8,20 @@
 
     <ListPreference android:title="Size"
         android:key="sizePref"
-        android:defaultValue="medium"
+        android:defaultValue="any"
         android:entries="@array/sizeOptions"
         android:entryValues="@array/sizeOptions"/>
 
     <ListPreference android:title="Color"
         android:key="colorPref"
-        android:defaultValue="black"
+        android:defaultValue="any"
         android:entries="@array/colorOptions"
         android:entryValues="@array/colorOptions"/>
 
     <ListPreference android:title="File Type"
         android:key="fileTypePref"
-        android:defaultValue="all"
-        android:entries="@array/fileOptions"
-        android:entryValues="@array/fileOptions"/>
+        android:defaultValue="any"
+        android:entries="@array/typeOptions"
+        android:entryValues="@array/typeOptions"/>
 
 </PreferenceScreen><!-- From: file:/Users/Caren/Documents/Android/GridImageSearch/app/src/main/res/xml/settings.xml -->

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="sizeOptions">
+        <item>any</item>
         <item>small</item>
         <item>medium</item>
         <item>large</item>
@@ -8,6 +9,7 @@
     </string-array>
 
     <string-array name="colorOptions">
+        <item>any</item>
         <item>black</item>
         <item>blue</item>
         <item>brown</item>
@@ -22,11 +24,12 @@
         <item>yellow</item>
     </string-array>
 
-    <string-array name="fileOptions">
-        <item>all</item>
-        <item>jpg</item>
-        <item>png</item>
-        <item>gif</item>
+    <string-array name="typeOptions">
+        <item>any</item>
+        <item>face</item>
+        <item>photo</item>
+        <item>clipart</item>
+        <item>lineart</item>
     </string-array>
 
 </resources>

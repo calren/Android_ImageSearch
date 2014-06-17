@@ -93,11 +93,6 @@
                 qualifiers=""
                 type="layout" />
             <file
-                name="activity_settings"
-                path="/Users/Caren/Documents/Android/GridImageSearch/app/src/main/res/layout/activity_settings.xml"
-                qualifiers=""
-                type="layout" />
-            <file
                 name="item_image_result"
                 path="/Users/Caren/Documents/Android/GridImageSearch/app/src/main/res/layout/item_image_result.xml"
                 qualifiers=""
@@ -128,7 +123,27 @@
             <file
                 path="/Users/Caren/Documents/Android/GridImageSearch/app/src/main/res/values/settingsArrays.xml"
                 qualifiers="" >
+                <string-array name="typeOptions" >
+                    <item>
+any
+                    </item>
+                    <item>
+face
+                    </item>
+                    <item>
+photo
+                    </item>
+                    <item>
+clipart
+                    </item>
+                    <item>
+lineart
+                    </item>
+                </string-array>
                 <string-array name="sizeOptions" >
+                    <item>
+any
+                    </item>
                     <item>
 small
                     </item>
@@ -143,6 +158,9 @@ extra-large
                     </item>
                 </string-array>
                 <string-array name="colorOptions" >
+                    <item>
+any
+                    </item>
                     <item>
 black
                     </item>
@@ -178,20 +196,6 @@ white
                     </item>
                     <item>
 yellow
-                    </item>
-                </string-array>
-                <string-array name="fileOptions" >
-                    <item>
-all
-                    </item>
-                    <item>
-jpg
-                    </item>
-                    <item>
-png
-                    </item>
-                    <item>
-gif
                     </item>
                 </string-array>
             </file>

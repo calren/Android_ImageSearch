@@ -5,6 +5,7 @@
     <eat-comment />
 
     <string-array name="colorOptions">
+        <item>any</item>
         <item>black</item>
         <item>blue</item>
         <item>brown</item>
@@ -17,12 +18,6 @@
         <item>teal</item>
         <item>white</item>
         <item>yellow</item>
-    </string-array>
-    <string-array name="fileOptions">
-        <item>all</item>
-        <item>jpg</item>
-        <item>png</item>
-        <item>gif</item>
     </string-array>
     <!-- From: file:/Users/Caren/Documents/Android/GridImageSearch/app/src/main/res/values/strings.xml -->
     <eat-comment />
@@ -51,10 +46,18 @@
     <eat-comment />
 
     <string-array name="sizeOptions">
+        <item>any</item>
         <item>small</item>
         <item>medium</item>
         <item>large</item>
         <item>extra-large</item>
+    </string-array>
+    <string-array name="typeOptions">
+        <item>any</item>
+        <item>face</item>
+        <item>photo</item>
+        <item>clipart</item>
+        <item>lineart</item>
     </string-array>
     <!-- From: file:/Users/Caren/Documents/Android/GridImageSearch/app/build/exploded-aar/com.etsy.android.grid/library/1.0.5/res/values/values.xml -->
     <eat-comment />

@@ -34,7 +34,7 @@ public class SearchActivity extends Activity {
     ImageResultArrayAdapter imageAdapter;
     TextView tvPlaceHolder;
 
-    int imageCount = 0;
+    int imageCount;
 
     SharedPreferences sharedPreferences;
 
@@ -105,20 +105,43 @@ public class SearchActivity extends Activity {
         Toast.makeText(this, "Searching for: " + url, Toast.LENGTH_SHORT).show();
         imageResults.clear();
         imageCount = 0;
-//        imageAdapter.notifyDataSetChanged();
-        apiRequest = "https://ajax.googleapis.com/ajax/services/search/images?rsz=8&v=1.0&q=" + Uri.encode(query) +
-                "&imgcolor=" + sharedPreferences.getString("colorPref", ""); // + "&imgtype=" + type;
-//        if (!(sharedPreferences.getString("fileTypePref", "all")).equals("all")) {
-//            apiRequest = apiRequest + "&as_filetype=" + sharedPreferences.getString("fileTypePref", "");
-//        }
+        apiRequest = buildApiRequest(url);
         callApi(apiRequest);
     }
+
+    public String buildApiRequest(String query) {
+        String apiRequest = "https://ajax.googleapis.com/ajax/services/search/images?rsz=8&v=1.0&q=" + Uri.encode(query);
+
+        String color = sharedPreferences.getString("colorPref", "any");
+        String size = sharedPreferences.getString("sizePref", "any");
+        String imgType = sharedPreferences.getString("fileTypePref", "any");
+        String site = sharedPreferences.getString("sitePref", "google.com");
+
+        if (!color.equals("any")) {
+            apiRequest = apiRequest + "&imgcolor=" + color;
+        }
+
+        if (!size.equals("any")) {
+            apiRequest = apiRequest + "&imgsz=" + size;
+        }
+
+        if (!imgType.equals("any")) {
+            apiRequest = apiRequest + "&imgtype=" + imgType;
+        }
+
+        if (!site.equals("google.com")) {
+            apiRequest = apiRequest + "&as_sitesearch=" + site;
+        }
+
+        return apiRequest;
+    }
+
 
     public void callApi(String apiRequest) {
         AsyncHttpClient client = new AsyncHttpClient();
         apiRequest = apiRequest + "&start=" + imageCount;
         imageCount = imageCount + 8;
-        System.out.println("apiRequest = " + apiRequest);
+//        System.out.println("apiRequest = " + apiRequest);
         client.get(apiRequest,
                 new JsonHttpResponseHandler() {
                     @Override
