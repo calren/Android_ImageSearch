@@ -17,15 +17,17 @@ int drawable ic_action_name 0x7f020000
 int drawable ic_launcher 0x7f020001
 int drawable ic_search 0x7f020002
 int drawable search 0x7f020003
-int id action_refresh 0x7f0a0004
-int id action_search 0x7f0a0005
-int id action_settings 0x7f0a0003
+int id action_refresh 0x7f0a0005
+int id action_search 0x7f0a0006
+int id action_settings 0x7f0a0004
+int id editText 0x7f0a0003
 int id gvResults 0x7f0a0001
 int id ivResult 0x7f0a0000
 int id tvPlaceHolder 0x7f0a0002
 int layout activity_image_display 0x7f030000
 int layout activity_search 0x7f030001
-int layout item_image_result 0x7f030002
+int layout activity_settings 0x7f030002
+int layout item_image_result 0x7f030003
 int menu image_display 0x7f090000
 int menu search 0x7f090001
 int menu settings 0x7f090002
@@ -38,7 +40,9 @@ int string title_activity_image_display 0x7f070005
 int string title_activity_settings 0x7f070006
 int string type_prompt 0x7f070007
 int style AppTheme 0x7f080000
-int style SettingsTheme 0x7f080001
+int style MyActionBar 0x7f080001
+int style MyTheme_ActionBar_TitleTextStyle 0x7f080002
+int style SettingsTheme 0x7f080003
 int[] styleable StaggeredGridView { 0x7f010000, 0x7f010001, 0x7f010002, 0x7f010003, 0x7f010004, 0x7f010005, 0x7f010006, 0x7f010007 }
 int styleable StaggeredGridView_column_count 0
 int styleable StaggeredGridView_column_count_landscape 2

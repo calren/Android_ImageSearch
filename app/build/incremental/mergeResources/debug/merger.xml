@@ -279,23 +279,49 @@ lineart
                 qualifiers="" >
 
                 <style
+                    name="MyTheme.ActionBar.TitleTextStyle"
+                    parent="@android:style/TextAppearance.Holo.Widget.ActionBar.Title" >
+                    <item name="android:textColor">
+#FFF
+                    </item>
+                </style>
+
+                <style
                     name="SettingsTheme"
                     parent="android:Theme.Holo.Light.DarkActionBar" >
 
                     <!-- Customize your theme here. -->
                     <item name="android:textColor">
-#06266F
+#FFF
                     </item>
                     <item name="android:textColorSecondary">
-#2A4480
+#6D9BF1
+                    </item>
+                    <item name="android:background">
+#000
+                    </item>
+                    <item name="android:actionBarStyle">
+@style/MyActionBar
                     </item>
                 </style>
 
                 <style
                     name="AppTheme"
                     parent="android:Theme.Holo.Light.DarkActionBar" >
+                    <item name="android:actionBarStyle">
+@style/MyActionBar
+                    </item>
+                </style>
 
-                    <!-- Customize your theme here. -->
+                <style
+                    name="MyActionBar"
+                    parent="@android:style/Widget.Holo.Light.ActionBar" >
+                    <item name="android:background">
+#000
+                    </item>
+                    <item name="android:titleTextStyle">
+@style/MyTheme.ActionBar.TitleTextStyle
+                    </item>
                 </style>
             </file>
             <file
@@ -329,6 +355,11 @@ lineart
                 path="/Users/Caren/Documents/Android/GridImageSearch/app/src/main/res/drawable-hdpi/ic_action_name.png"
                 qualifiers="hdpi"
                 type="drawable" />
+            <file
+                name="activity_settings"
+                path="/Users/Caren/Documents/Android/GridImageSearch/app/src/main/res/layout/activity_settings.xml"
+                qualifiers=""
+                type="layout" />
         </source>
         <source path="/Users/Caren/Documents/Android/GridImageSearch/app/build/res/rs/debug" />
         <source path="/Users/Caren/Documents/Android/GridImageSearch/app/build/res/generated/debug" />
