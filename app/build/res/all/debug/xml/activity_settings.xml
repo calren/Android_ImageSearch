@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <EditTextPreference android:title="Site Search"
+        android:key="sitePref"
+        android:defaultValue="google.com">
+    </EditTextPreference>
+
+    <ListPreference android:title="Size"
+        android:key="sizePref"
+        android:defaultValue="any"
+        android:entries="@array/sizeOptions"
+        android:entryValues="@array/sizeOptions"/>
+
+    <ListPreference android:title="Color"
+        android:key="colorPref"
+        android:defaultValue="any"
+        android:entries="@array/colorOptions"
+        android:entryValues="@array/colorOptions"/>
+
+    <ListPreference android:title="File Type"
+        android:key="fileTypePref"
+        android:defaultValue="any"
+        android:entries="@array/typeOptions"
+        android:entryValues="@array/typeOptions"/>
+
+</PreferenceScreen><!-- From: file:/Users/Caren/Documents/Android/GridImageSearch/app/src/main/res/xml/activity_settings.xml -->

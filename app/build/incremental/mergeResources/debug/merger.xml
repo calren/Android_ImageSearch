@@ -292,16 +292,10 @@ lineart
 
                     <!-- Customize your theme here. -->
                     <item name="android:textColor">
-#FFF
+#00009C
                     </item>
                     <item name="android:textColorSecondary">
-#6D9BF1
-                    </item>
-                    <item name="android:background">
-#000
-                    </item>
-                    <item name="android:actionBarStyle">
-@style/MyActionBar
+#E8110F
                     </item>
                 </style>
 
@@ -331,11 +325,6 @@ lineart
                 </dimen>
             </file>
             <file
-                name="settings"
-                path="/Users/Caren/Documents/Android/GridImageSearch/app/src/main/res/xml/settings.xml"
-                qualifiers=""
-                type="xml" />
-            <file
                 name="ic_action_name"
                 path="/Users/Caren/Documents/Android/GridImageSearch/app/src/main/res/drawable-mdpi/ic_action_name.png"
                 qualifiers="mdpi"
@@ -357,9 +346,9 @@ lineart
                 type="drawable" />
             <file
                 name="activity_settings"
-                path="/Users/Caren/Documents/Android/GridImageSearch/app/src/main/res/layout/activity_settings.xml"
+                path="/Users/Caren/Documents/Android/GridImageSearch/app/src/main/res/xml/activity_settings.xml"
                 qualifiers=""
-                type="layout" />
+                type="xml" />
         </source>
         <source path="/Users/Caren/Documents/Android/GridImageSearch/app/build/res/rs/debug" />
         <source path="/Users/Caren/Documents/Android/GridImageSearch/app/build/res/generated/debug" />
