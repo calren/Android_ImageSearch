@@ -25,5 +25,5 @@ Completed user stories:
  * [x] Extra: Added a Refresh action for better user experience
  * [x] Extra: Added 'any' optiosn for better user experience
 
-![Video Walkthrough](imageSearch2.gif)
+![Video Walkthrough](ImageSearch2.gif)
 
