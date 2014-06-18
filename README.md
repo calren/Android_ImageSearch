@@ -26,6 +26,8 @@ Completed user stories:
  * [x] Extra: Added 'any' optiosn for better user experience
 
 ![Video Walkthrough](ImageSearch2.gif)
+
+
 ![Start screencap] (imageFinder.png)
 
 
